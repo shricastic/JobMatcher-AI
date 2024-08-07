@@ -40,7 +40,18 @@ def extract_pdf_txt(uploaded_file):
     return text
 
 
-
+st.markdown("""
+    <style>
+        .reportview-container {
+            margin-top: -2em;
+        }
+        #MainMenu {visibility: hidden;}
+        .stDeployButton {display:none;}
+        footer {visibility: hidden;}
+        header {visibility: hidden;}
+        #stDecoration {display:none;}
+    </style>
+""", unsafe_allow_html=True)
 
 st.title("AI ATS System")
 st.text("Increase your Resume shortlisting and matching chances in few clicks")
