@@ -18,7 +18,7 @@
 
 ## Deployment
 
-The application is deployed and accessible at [JobMatcher AI](https://your-deployment-link.com)
+The application is deployed and accessible at [JobMatcher AI](https://jobmatcher-ai.streamlit.app)
 
 ## Setup and Installation
 
