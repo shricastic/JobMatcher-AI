@@ -61,9 +61,10 @@ uploaded_file = st.file_uploader("Upload your resume/cv", type="pdf", help="plea
 submit = st.button("Submit")
 
 if submit:
-    if uploaded_file is not None and jd:
-        resume_text = extract_pdf_txt(uploaded_file)
-        response = get_response(resume_text, jd)
-        st.subheader(response)
-    else:
-        st.error("Please upload a PDF resume and paste the job description")
+    with st.spinner("Please wait analysing the resume/cv..."):
+        if uploaded_file is not None and jd:
+            resume_text = extract_pdf_txt(uploaded_file)
+            response = get_response(resume_text, jd)
+            st.subheader(response)
+        else:
+            st.error("Please upload a PDF resume and paste the job description")
